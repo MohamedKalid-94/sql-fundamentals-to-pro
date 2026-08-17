@@ -1,5 +1,10 @@
 # SQL Learning Journey
 
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-18-4169E1?logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Community-47A248?logo=mongodb&logoColor=white)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+
 A structured, hands-on log of learning SQL (MySQL, PostgreSQL, MongoDB) from scratch — as a Python developer building toward an AI/ML career path.
 
 ## 📌 Goal
@@ -7,6 +12,7 @@ A structured, hands-on log of learning SQL (MySQL, PostgreSQL, MongoDB) from scr
 Build solid SQL fundamentals and database skills to add to my resume and prepare for technical interviews, alongside my Python background.
 
 ## ⭐ Highlights
+
 > _(updated as I progress)_
 - 🔲 Built multi-table schemas with primary/foreign keys
 - 🔲 Practiced joins (INNER, LEFT, RIGHT, self-joins)
@@ -54,7 +60,8 @@ sql-learning-journey/
 | Day | Topics | Status |
 |-----|--------|--------|
 | 1 | SQL Syntax, WHERE | ✅ Complete |
-| 2 | ORDER BY, AND/OR/NOT | 🔲 Pending |
+| 2 | ORDER BY, AND/OR/NOT | ✅ Complete |
+| 3 | Insert Into, Null Values | 🔲 Pending |
 
 ## 📖 How to Use These Scripts
 
