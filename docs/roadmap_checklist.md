@@ -8,9 +8,9 @@
 ## Week 1-2: SQL Fundamentals (Topics 1-15)
 
 - [x] Day 1 — SQL Syntax, SQL Where
-- [ ] Day 2 — SQL Order By, AND/OR/NOT
-- [ ] Day 3 — Insert Into, Null Values
-- [ ] Day 4 — Update, Delete
+- [x] Day 2 — SQL Order By, AND/OR/NOT
+- [x] Day 3 — Insert Into, Null Values
+- [x] Day 4 — Update, Delete
 - [ ] Day 5 — Min/Max, Count/Sum/Avg
 - [ ] Day 6 — Union, Group By
 - [ ] Day 7 — Operators, NULL Values (deep dive), SELECT TOP
