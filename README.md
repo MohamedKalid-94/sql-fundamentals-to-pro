@@ -35,7 +35,7 @@ Learning is broken into 4 sections, ~2 hours/day:
 3. **PostgreSQL** (Tables, CRUD, Joins, Aggregates)
 4. **MongoDB** (Collections, CRUD, Query Operators, Aggregations, Indexing)
 
-Full checklist: see https://github.com/MohamedKalid-94/sql-fundamentals-to-pro/blob/main/docs/roadmap_checklist.md
+Full checklist: see [`docs/roadmap-checklist.md`](./docs/roadmap-checklist.md)
 
 ## 📂 Repo Structure
 
@@ -63,7 +63,8 @@ sql-learning-journey/
 | 2 | ORDER BY, AND/OR/NOT | ✅ Complete |
 | 3 | Insert Into, Null Values | ✅ Complete |
 | 4 | Update, Delete | ✅ Complete |
-| 5 | Min/Max, Count/Sum/Avg | 🔲 Pending |
+| 5 | Min/Max, Count/Sum/Avg | ✅ Complete |
+| 6 | Union, Group By | 🔲 Pending |
 
 ## 📖 How to Use These Scripts
 
