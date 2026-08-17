@@ -35,7 +35,7 @@ Learning is broken into 4 sections, ~2 hours/day:
 3. **PostgreSQL** (Tables, CRUD, Joins, Aggregates)
 4. **MongoDB** (Collections, CRUD, Query Operators, Aggregations, Indexing)
 
-Full checklist: see [`docs/roadmap-checklist.md`](./docs/roadmap-checklist.md)
+Full checklist: see https://github.com/MohamedKalid-94/sql-fundamentals-to-pro/blob/main/docs/roadmap_checklist.md
 
 ## 📂 Repo Structure
 
