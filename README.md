@@ -61,7 +61,8 @@ sql-learning-journey/
 |-----|--------|--------|
 | 1 | SQL Syntax, WHERE | ✅ Complete |
 | 2 | ORDER BY, AND/OR/NOT | ✅ Complete |
-| 3 | Insert Into, Null Values | 🔲 Pending |
+| 3 | Insert Into, Null Values | ✅ Complete |
+| 4 | Update, Delete | 🔲 Pending |
 
 ## 📖 How to Use These Scripts
 
