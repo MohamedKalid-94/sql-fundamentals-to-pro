@@ -46,21 +46,12 @@ sql-learning-journey/
 │   └── roadmap-checklist.md         # Full day-by-day roadmap
 ├── 01-fundamentals/
 │   ├── day1_syntax_where.sql
-│   └── ...
+│   ├── ...
+│   └── day8_practice.sql
 ├── 02-mysql/
-│   ├── 16_create_database.sql
-│   ├── 17_drop_database.sql
-│   ├── 18_create_table.sql
-│   ├── 19_drop_table.sql
-│   ├── 20_alter_table.sql
-│   ├── 21_not_null.sql
-│   ├── 22_unique_key.sql
-│   ├── 23_primary_key.sql
-│   ├── 24_foreign_key.sql
-│   ├── 25_default_key.sql
-│   ├── 26_date.sql
-│   ├── 27_views.sql
-│   └── 28_add_drop_columns.sql
+│   ├── day16_create_database.sql
+│   ├── ...
+│   └── day28_add_drop_columns.sql
 ├── 03-postgresql/
 │   └── ...
 └── 04-mongodb/
