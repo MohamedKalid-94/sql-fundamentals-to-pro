@@ -11,9 +11,9 @@
 - [x] Day 2 — SQL Order By, AND/OR/NOT
 - [x] Day 3 — Insert Into, Null Values
 - [x] Day 4 — Update, Delete
-- [ ] Day 5 — Min/Max, Count/Sum/Avg
-- [ ] Day 6 — Union, Group By
-- [ ] Day 7 — Operators, NULL Values (deep dive), SELECT TOP
+- [x] Day 5 — Min/Max, Count/Sum/Avg
+- [x] Day 6 — Union, Group By
+- [x] Day 7 — Operators, NULL Values (deep dive), SELECT TOP
 - [ ] Day 8 — **Practice Day**: Write 10-15 mixed queries (WHERE, ORDER BY, GROUP BY) on MySQL's `sakila` sample database
 
 ---
