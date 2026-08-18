@@ -48,7 +48,19 @@ sql-learning-journey/
 │   ├── day1_syntax_where.sql
 │   └── ...
 ├── 02-mysql/
-│   └── ...
+│   ├── 16_create_database.sql
+│   ├── 17_drop_database.sql
+│   ├── 18_create_table.sql
+│   ├── 19_drop_table.sql
+│   ├── 20_alter_table.sql
+│   ├── 21_not_null.sql
+│   ├── 22_unique_key.sql
+│   ├── 23_primary_key.sql
+│   ├── 24_foreign_key.sql
+│   ├── 25_default_key.sql
+│   ├── 26_date.sql
+│   ├── 27_views.sql
+│   └── 28_add_drop_columns.sql
 ├── 03-postgresql/
 │   └── ...
 └── 04-mongodb/
@@ -68,7 +80,27 @@ sql-learning-journey/
 | 7 | Operators, NULL Values (deep dive), SELECT TOP | ✅ Complete |
 | 8 | Practice Day (Fundamentals wrap-up) | ✅ Complete |
 
-🎉 **SQL Fundamentals section (Days 1-8) complete!** Next: MySQL-specific topics (databases, tables, keys, constraints) — Day 9 onward.
+🎉 **SQL Fundamentals section (Days 1-8) complete!**
+
+**MySQL section (Topics 16-28):**
+
+| Topic | Name | Status |
+|-------|------|--------|
+| 16 | Create Database | ✅ Complete |
+| 17 | Drop Database | ✅ Complete |
+| 18 | Create Table | ✅ Complete |
+| 19 | Drop Table | ✅ Complete |
+| 20 | Alter Table | ✅ Complete |
+| 21 | Not Null | ✅ Complete |
+| 22 | Unique Key | ✅ Complete |
+| 23 | Primary Key | ✅ Complete |
+| 24 | Foreign Key | ✅ Complete |
+| 25 | Default Key | ✅ Complete |
+| 26 | Date | ✅ Complete |
+| 27 | Views | ✅ Complete |
+| 28 | Adding & Dropping Columns | ✅ Complete |
+
+🎉 **MySQL section (Topics 16-28) complete!** Next: PostgreSQL-specific topics — Topic 29 onward.
 
 ## 📖 How to Use These Scripts
 
