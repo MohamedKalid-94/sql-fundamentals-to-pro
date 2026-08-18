@@ -20,14 +20,14 @@
 
 ## Week 2-3: MySQL (Topics 16-28)
 
-- [ ] Day 9 — Create Database, Drop Database, Create Table
-- [ ] Day 10 — Drop Table, Alter Table
-- [ ] Day 11 — Not Null, Unique Key
-- [ ] Day 12 — Primary Key, Foreign Key
-- [ ] Day 13 — Default Key, Date
-- [ ] Day 14 — Views
-- [ ] Day 15 — Adding & Dropping Columns
-- [ ] Day 16 — **Practice Day**: Build a 3-table schema (students/courses/enrollments) with proper keys in MySQL Workbench
+- [x] Day 9 — Create Database, Drop Database, Create Table
+- [x] Day 10 — Drop Table, Alter Table
+- [X] Day 11 — Not Null, Unique Key
+- [x] Day 12 — Primary Key, Foreign Key
+- [x] Day 13 — Default Key, Date
+- [x] Day 14 — Views
+- [X] Day 15 — Adding & Dropping Columns
+- [X] Day 16 — **Practice Day**: Build a 3-table schema (students/courses/enrollments) with proper keys in MySQL Workbench
 
 ---
 
