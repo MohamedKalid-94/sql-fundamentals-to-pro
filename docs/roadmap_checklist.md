@@ -14,7 +14,7 @@
 - [x] Day 5 — Min/Max, Count/Sum/Avg
 - [x] Day 6 — Union, Group By
 - [x] Day 7 — Operators, NULL Values (deep dive), SELECT TOP
-- [ ] Day 8 — **Practice Day**: Write 10-15 mixed queries (WHERE, ORDER BY, GROUP BY) on MySQL's `sakila` sample database
+- [x] Day 8 — **Practice Day**: Write 10-15 mixed queries (WHERE, ORDER BY, GROUP BY) on MySQL's `sakila` sample database
 
 ---
 
