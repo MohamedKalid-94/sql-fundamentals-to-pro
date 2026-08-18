@@ -66,7 +66,9 @@ sql-learning-journey/
 | 5 | Min/Max, Count/Sum/Avg | ✅ Complete |
 | 6 | Union, Group By | ✅ Complete |
 | 7 | Operators, NULL Values (deep dive), SELECT TOP | ✅ Complete |
-| 8 | Practice Day (Fundamentals wrap-up) | 🔲 Pending |
+| 8 | Practice Day (Fundamentals wrap-up) | ✅ Complete |
+
+🎉 **SQL Fundamentals section (Days 1-8) complete!** Next: MySQL-specific topics (databases, tables, keys, constraints) — Day 9 onward.
 
 ## 📖 How to Use These Scripts
 
