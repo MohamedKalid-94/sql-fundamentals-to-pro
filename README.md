@@ -65,7 +65,7 @@ sql-learning-journey/
 | 4 | Update, Delete | ✅ Complete |
 | 5 | Min/Max, Count/Sum/Avg | ✅ Complete |
 | 6 | Union, Group By | ✅ Complete |
-| 7 | Operators, NULL Values (deep dive), SELECT TOP | 🔲 Pending |
+| 7 | Operators, NULL Values (deep dive), SELECT TOP | ✅ Complete |
 | 8 | Practice Day (Fundamentals wrap-up) | 🔲 Pending |
 
 ## 📖 How to Use These Scripts
