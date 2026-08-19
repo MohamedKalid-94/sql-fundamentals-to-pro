@@ -1,94 +1,68 @@
 /*
-========================================================
-TOPIC 27: VIEWS
-========================================================
+============================================================
+MYSQL - TOPIC 27: VIEWS
+============================================================
 
-Purpose:
-    A VIEW is a virtual table based on a SQL query.
+WHAT IS A VIEW?
 
-Benefits:
-    - Simplifies complex queries
-    - Can hide sensitive columns
-    - Provides a reusable query
+A VIEW is a virtual table based on the result of a SELECT
+query.
 
-========================================================
+Views are useful for:
+
+- Simplifying complex queries
+- Reusing frequently needed queries
+- Restricting visible columns
+- Creating a consistent interface to data
+
+============================================================
 */
 
-USE mysql_learning;
+CREATE DATABASE IF NOT EXISTS company_db;
+USE company_db;
 
--- Create department table
-CREATE TABLE view_departments (
-    department_id INT PRIMARY KEY,
-    department_name VARCHAR(100),
-    location VARCHAR(100)
-);
+DROP VIEW IF EXISTS engineering_employees;
+DROP TABLE IF EXISTS employees;
 
--- Insert departments
-INSERT INTO view_departments
-VALUES
-(1, 'Engineering', 'Chennai'),
-(2, 'HR', 'Bangalore'),
-(3, 'Finance', 'Mumbai');
-
--- Create employee table
-CREATE TABLE view_employees (
+CREATE TABLE employees (
     employee_id INT PRIMARY KEY,
     employee_name VARCHAR(100),
-    email VARCHAR(100),
-    department_id INT,
-    salary DECIMAL(10,2),
-
-    FOREIGN KEY (department_id)
-    REFERENCES view_departments(department_id)
+    department VARCHAR(50),
+    salary DECIMAL(10,2)
 );
 
--- Insert employees
-INSERT INTO view_employees
+INSERT INTO employees
+(employee_id, employee_name, department, salary)
 VALUES
-(101, 'Kalid', 'kalid@example.com', 1, 75000),
-(102, 'Ahmed', 'ahmed@example.com', 2, 50000),
-(103, 'Rahman', 'rahman@example.com', 3, 60000);
+(1, 'Kalid', 'Engineering', 80000.00),
+(2, 'Rahman', 'Finance', 60000.00),
+(3, 'David', 'Engineering', 90000.00),
+(4, 'Ali', 'HR', 50000.00);
 
--- -----------------------------------------------------
+-- ----------------------------------------------------------
 -- CREATE VIEW
--- -----------------------------------------------------
-
-CREATE VIEW employee_details AS
-SELECT
-    e.employee_id,
-    e.employee_name,
-    e.email,
-    d.department_name,
-    d.location
-FROM view_employees AS e
-JOIN view_departments AS d
-ON e.department_id = d.department_id;
-
--- Query the VIEW
-SELECT * FROM employee_details;
-
--- -----------------------------------------------------
--- VIEW WITH WHERE CONDITION
--- -----------------------------------------------------
+-- ----------------------------------------------------------
 
 CREATE VIEW engineering_employees AS
 SELECT
     employee_id,
     employee_name,
-    email,
     salary
-FROM view_employees
-WHERE department_id = 1;
+FROM employees
+WHERE department = 'Engineering';
 
--- Query the second view
-SELECT * FROM engineering_employees;
+-- ----------------------------------------------------------
+-- QUERY THE VIEW
+-- ----------------------------------------------------------
 
--- Show all views
-SHOW FULL TABLES
-WHERE Table_type = 'VIEW';
+SELECT *
+FROM engineering_employees;
 
--- Delete a view
--- DROP VIEW employee_details;
+-- ----------------------------------------------------------
+-- VIEW DEFINITION
+-- ----------------------------------------------------------
 
--- Safer:
--- DROP VIEW IF EXISTS employee_details;
+SHOW CREATE VIEW engineering_employees;
+
+-- To remove the view:
+-- DROP VIEW IF EXISTS engineering_employees;
