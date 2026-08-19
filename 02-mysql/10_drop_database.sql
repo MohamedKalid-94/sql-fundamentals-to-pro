@@ -1,35 +1,34 @@
 /*
-========================================================
-TOPIC 17: DROP DATABASE
-========================================================
+============================================================
+MYSQL - TOPIC 17: DROP DATABASE
+============================================================
 
-Purpose:
-    Permanently delete a database and everything inside it.
+WHAT IS DROP DATABASE?
+
+DROP DATABASE permanently removes a database and all
+objects inside it.
 
 WARNING:
-    DROP DATABASE deletes:
-        - Tables
-        - Data
-        - Views
-        - Other database objects
+This is a destructive operation.
 
-Syntax:
-    DROP DATABASE database_name;
-
-========================================================
+============================================================
 */
 
--- Display available databases
+-- Create a temporary database for demonstration.
+CREATE DATABASE IF NOT EXISTS practice_db;
+
+-- Display available databases.
 SHOW DATABASES;
 
--- Select the database
-USE mysql_learning;
+-- Delete the practice database.
+DROP DATABASE IF EXISTS practice_db;
 
--- IMPORTANT:
--- Uncomment the following command ONLY when you
--- intentionally want to delete the entire database.
+-- Verify that practice_db has been removed.
+SHOW DATABASES;
 
--- DROP DATABASE mysql_learning;
+/*
+IMPORTANT:
 
--- Safer version:
--- DROP DATABASE IF EXISTS mysql_learning;
+Never use DROP DATABASE on a production database without
+being absolutely certain.
+*/
