@@ -1,70 +1,81 @@
 /*
-========================================================
-TOPIC 24: FOREIGN KEY
-========================================================
+============================================================
+MYSQL - TOPIC 24: FOREIGN KEY
+============================================================
 
-Purpose:
-    A FOREIGN KEY creates a relationship between two tables.
+WHAT IS A FOREIGN KEY?
 
-Parent table:
-    departments
+A FOREIGN KEY creates a relationship between two tables.
 
-Child table:
-    employees
+The foreign key in the child table references a key in
+the parent table.
 
-The employees.department_id must refer to an existing
-departments.department_id.
-
-========================================================
+============================================================
 */
 
-USE mysql_learning;
+CREATE DATABASE IF NOT EXISTS company_db;
+USE company_db;
 
--- -----------------------------------------------------
+DROP TABLE IF EXISTS employees;
+DROP TABLE IF EXISTS departments;
+
+-- ----------------------------------------------------------
 -- PARENT TABLE
--- -----------------------------------------------------
+-- ----------------------------------------------------------
 
-CREATE TABLE fk_departments (
+CREATE TABLE departments (
     department_id INT PRIMARY KEY,
-    department_name VARCHAR(100) NOT NULL
+    department_name VARCHAR(50) NOT NULL
 );
 
--- Insert parent records
-INSERT INTO fk_departments
+-- ----------------------------------------------------------
+-- CHILD TABLE
+-- ----------------------------------------------------------
+
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    employee_name VARCHAR(100) NOT NULL,
+    department_id INT,
+
+    FOREIGN KEY (department_id)
+        REFERENCES departments(department_id)
+);
+
+-- ----------------------------------------------------------
+-- INSERT PARENT DATA
+-- ----------------------------------------------------------
+
+INSERT INTO departments
+(department_id, department_name)
 VALUES
 (1, 'Engineering'),
 (2, 'HR'),
 (3, 'Finance');
 
--- -----------------------------------------------------
--- CHILD TABLE
--- -----------------------------------------------------
+-- ----------------------------------------------------------
+-- INSERT CHILD DATA
+-- ----------------------------------------------------------
 
-CREATE TABLE fk_employees (
-    employee_id INT PRIMARY KEY,
-    employee_name VARCHAR(100) NOT NULL,
-    department_id INT,
-
-    CONSTRAINT fk_employee_department
-    FOREIGN KEY (department_id)
-    REFERENCES fk_departments(department_id)
-);
-
--- Valid records
-INSERT INTO fk_employees
+INSERT INTO employees
+(employee_id, employee_name, department_id)
 VALUES
 (101, 'Kalid', 1),
-(102, 'Ahmed', 2),
-(103, 'Rahman', 3);
+(102, 'Rahman', 2),
+(103, 'Ali', 3);
 
--- Display employees
-SELECT * FROM fk_employees;
+-- ----------------------------------------------------------
+-- JOIN THE TABLES
+-- ----------------------------------------------------------
 
--- This will FAIL because department_id 10
--- does not exist in fk_departments.
---
--- INSERT INTO fk_employees
--- VALUES (104, 'Ali', 10);
+SELECT
+    e.employee_id,
+    e.employee_name,
+    d.department_name
+FROM employees e
+JOIN departments d
+    ON e.department_id = d.department_id;
 
--- Display relationship
-DESC fk_employees;
+/*
+The foreign key ensures that an employee cannot reference
+a department_id that does not exist in departments.
+*/
