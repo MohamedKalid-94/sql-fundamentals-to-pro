@@ -1,67 +1,95 @@
-# SQL Learning Roadmap — 2 hrs/day Checklist
+# SQL Learning Roadmap — Checklist
 
-**Goal:** Cover SQL Fundamentals + MySQL + PostgreSQL + MongoDB, ~6 weeks
-**Pace:** 2 hours/day
-
----
-
-## Week 1-2: SQL Fundamentals (Topics 1-15)
-
-- [x] Day 1 — SQL Syntax, SQL Where
-- [x] Day 2 — SQL Order By, AND/OR/NOT
-- [x] Day 3 — Insert Into, Null Values
-- [x] Day 4 — Update, Delete
-- [x] Day 5 — Min/Max, Count/Sum/Avg
-- [x] Day 6 — Union, Group By
-- [x] Day 7 — Operators, NULL Values (deep dive), SELECT TOP
-- [x] Day 8 — **Practice Day**: Write 10-15 mixed queries (WHERE, ORDER BY, GROUP BY) on MySQL's `sakila` sample database
+**Goal:** Cover SQL Fundamentals + MySQL + PostgreSQL + MongoDB
+**Status:** 🎉 All sections complete
 
 ---
 
-## Week 2-3: MySQL (Topics 16-28)
+## 01-fundamentals/ (Topics 01-08)
 
-- [x] Day 9 — Create Database, Drop Database, Create Table
-- [x] Day 10 — Drop Table, Alter Table
-- [X] Day 11 — Not Null, Unique Key
-- [x] Day 12 — Primary Key, Foreign Key
-- [x] Day 13 — Default Key, Date
-- [x] Day 14 — Views
-- [X] Day 15 — Adding & Dropping Columns
-- [X] Day 16 — **Practice Day**: Build a 3-table schema (students/courses/enrollments) with proper keys in MySQL Workbench
-
----
-
-## Week 3-5: PostgreSQL (Topics 29-46)
-
-- [x] Day 17 — Create Table, Insert Into
-- [x] Day 18 — Fetch Data, Add Column
-- [x] Day 19 — Update, Alter Column
-- [x] Day 20 — Drop Column, Delete
-- [x] Day 21 — Drop Table, Operators
-- [x] Day 22 — Select, Order By
-- [x] Day 23 — Limit, Min and Max
-- [x] Day 24 — Count/Sum/Avg
-- [X] Day 25 — Cross Join
-- [X] Day 26 — Group By, Exists
-- [X] Day 27 — **Practice Day**: Recreate MySQL schema in pgAdmin, compare syntax differences
-- [X] Day 28 — **Practice Day**: Write 10+ queries covering everything learned in PostgreSQL
+- [x] `01_syntax_where.sql` — SQL Syntax, WHERE
+- [x] `02_orderby_andornot.sql` — ORDER BY, AND/OR/NOT
+- [x] `03_insert_null.sql` — INSERT INTO, NULL Values
+- [x] `04_update_delete.sql` — UPDATE, DELETE
+- [x] `05_aggregates.sql` — MIN/MAX, COUNT/SUM/AVG
+- [x] `06_union_groupby.sql` — UNION, GROUP BY
+- [x] `07_operators_null_limit.sql` — Operators (IN/BETWEEN/NOT IN), NULL deep dive, LIMIT (SELECT TOP equivalent)
+- [x] `08_practice.sql` — Practice Day: 12 mixed queries combining everything above
 
 ---
 
-## Week 5-6: MongoDB (Topics 47-58)
+## 02-mysql/ (Topics 09-21)
 
-- [ ] Day 29 — MongoDB Create DB, Collection
-- [ ] Day 30 — Insert, Find
-- [ ] Day 31 — Update, Delete
-- [ ] Day 32 — Query Operators
-- [ ] Day 33 — Aggregations
-- [ ] Day 34 — Indexing, Validation
-- [ ] Day 35 — Data API, Chart
-- [ ] Day 36 — **Practice Day**: Build a `products` collection, practice find/update/aggregate queries in Compass
+> Note: filenames are sequential (09-21); each file's header comment still labels its original topic number (16-28).
+
+- [x] `09_create_database.sql` — Topic 16: Create Database
+- [x] `10_drop_database.sql` — Topic 17: Drop Database
+- [x] `11_create_table.sql` — Topic 18: Create Table
+- [x] `12_drop_table.sql` — Topic 19: Drop Table
+- [x] `13_alter_table.sql` — Topic 20: Alter Table
+- [x] `14_not_null.sql` — Topic 21: Not Null
+- [x] `15_unique_key.sql` — Topic 22: Unique Key
+- [x] `16_primary_key.sql` — Topic 23: Primary Key
+- [x] `17_foreign_key.sql` — Topic 24: Foreign Key
+- [x] `18_date.sql` — Topic 26: Date
+- [x] `19_default_key.sql` — Topic 25: Default
+- [x] `20_views.sql` — Topic 27: Views
+- [x] `21_add_drop_columns.sql` — Topic 28: Adding & Dropping Columns
 
 ---
+
+## 03-postgresql/ (Topics 22-39)
+
+- [x] `22_create_table.sql` — Create Table
+- [x] `23_insert_into.sql` — Insert Into
+- [x] `24_fetch_data.sql` — Fetch Data
+- [x] `25_add_column.sql` — Add Column
+- [x] `26_update.sql` — Update
+- [x] `27_alter_column.sql` — Alter Column
+- [x] `28_drop_column.sql` — Drop Column
+- [x] `29_delete.sql` — Delete
+- [x] `30_drop_table.sql` — Drop Table
+- [x] `31_operators.sql` — Operators
+- [x] `32_select.sql` — Select
+- [x] `33_order_by.sql` — Order By
+- [x] `34_limit.sql` — Limit
+- [x] `35_min_max.sql` — Min and Max
+- [x] `36_count_sum_avg.sql` — Count, Sum, Avg
+- [x] `37_cross_join.sql` — Cross Join
+- [x] `38_group_by.sql` — Group By
+- [x] `39_exists.sql` — Exists
+
+---
+
+## 04-mongodb/ (Topics 40-51)
+
+- [x] `40_create_database.js` — Create Database
+- [x] `41_collection.js` — Collection
+- [x] `42_insert.js` — Insert
+- [x] `43_find.js` — Find
+- [x] `44_update.js` — Update
+- [x] `45_delete.js` — Delete
+- [x] `46_query_operators.js` — Query Operators
+- [x] `47_aggregations.js` — Aggregations
+- [x] `48_indexing.js` — Indexing
+- [x] `49_validation.js` — Validation
+- [x] `50_data_api.md` — Data API
+- [x] `51_charts.md` — Charts
+
+---
+
+## 🎯 Next Steps (Advanced Topics — Not Yet Started)
+
+- [ ] Joins in depth — INNER, LEFT, RIGHT, FULL OUTER, self-joins
+- [ ] Window functions — RANK, ROW_NUMBER, LAG/LEAD, PARTITION BY
+- [ ] Subqueries & CTEs (WITH clauses)
+- [ ] Indexing & query performance — EXPLAIN / EXPLAIN ANALYZE
+- [ ] Transactions & ACID — COMMIT, ROLLBACK, isolation levels
+- [ ] Database design & normalization — 1NF/2NF/3NF
+- [ ] Stored procedures, functions, triggers
+- [ ] 20-30 practice problems on LeetCode/HackerRank SQL
 
 ## Notes
-- Practice days are NOT optional — this is where concepts actually stick.
-- Use one consistent GUI tool per database (MySQL Workbench, pgAdmin 4, MongoDB Compass) — all confirmed installed.
-- After finishing this roadmap: move to advanced topics (joins in depth, window functions, CTEs, indexing/EXPLAIN ANALYZE, transactions, normalization) before attempting interview-style problems on LeetCode/HackerRank SQL.
+
+- Every file listed above was hand-run and verified in MySQL Workbench, pgAdmin 4, or MongoDB Compass.
+- This checklist reflects the actual filenames in the repo, not a generic day-count plan.
