@@ -1,50 +1,42 @@
 /*
-========================================================
-TOPIC 22: UNIQUE KEY
-========================================================
+============================================================
+MYSQL - TOPIC 22: UNIQUE KEY
+============================================================
 
-Purpose:
-    UNIQUE prevents duplicate values in a column.
+WHAT IS UNIQUE?
 
-Example:
-    Two employees cannot have the same email address.
+UNIQUE prevents duplicate values in a column.
 
-Syntax:
-    column_name datatype UNIQUE;
-
-or:
-
-    CONSTRAINT constraint_name
-    UNIQUE (column_name);
-
-========================================================
+============================================================
 */
 
-USE mysql_learning;
+CREATE DATABASE IF NOT EXISTS company_db;
+USE company_db;
 
--- Create table
-CREATE TABLE unique_demo (
-    employee_id INT PRIMARY KEY,
+DROP TABLE IF EXISTS employees;
+
+CREATE TABLE employees (
+    employee_id INT,
     employee_name VARCHAR(100),
-    email VARCHAR(100) UNIQUE
+    email VARCHAR(150) UNIQUE
 );
 
--- Insert valid records
-INSERT INTO unique_demo
+-- Insert unique email addresses.
+INSERT INTO employees
+(employee_id, employee_name, email)
 VALUES
-(101, 'Kalid', 'kalid@example.com');
+(1, 'Kalid', 'kalid@example.com'),
+(2, 'Rahman', 'rahman@example.com');
 
-INSERT INTO unique_demo
-VALUES
-(102, 'Ahmed', 'ahmed@example.com');
+SELECT * FROM employees;
 
--- This will FAIL because the email already exists.
--- INSERT INTO unique_demo
+-- ----------------------------------------------------------
+-- INVALID EXAMPLE
+-- ----------------------------------------------------------
+
+-- This would fail because the email already exists.
+
+-- INSERT INTO employees
+-- (employee_id, employee_name, email)
 -- VALUES
--- (103, 'Rahman', 'kalid@example.com');
-
--- Display records
-SELECT * FROM unique_demo;
-
--- Display structure
-DESC unique_demo;
+-- (3, 'David', 'kalid@example.com');
