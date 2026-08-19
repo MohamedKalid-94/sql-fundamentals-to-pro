@@ -1,70 +1,60 @@
 /*
-========================================================
-TOPIC 26: DATE
-========================================================
+============================================================
+MYSQL - TOPIC 26: DATE
+============================================================
 
-Purpose:
-    DATE stores calendar dates.
+WHAT IS DATE?
 
-Format:
-    YYYY-MM-DD
+DATE stores calendar dates.
+
+Standard format:
+
+YYYY-MM-DD
 
 Example:
-    2026-08-18
 
-Useful functions:
-    CURDATE() -> Current date
-    NOW()     -> Current date and time
+2026-08-19
 
-========================================================
+============================================================
 */
 
-USE mysql_learning;
+CREATE DATABASE IF NOT EXISTS company_db;
+USE company_db;
 
--- Create table
-CREATE TABLE date_demo (
+DROP TABLE IF EXISTS employees;
+
+CREATE TABLE employees (
     employee_id INT PRIMARY KEY,
     employee_name VARCHAR(100),
-    joining_date DATE,
-    birth_date DATE
+    joining_date DATE
 );
 
--- Insert dates
-INSERT INTO date_demo
+INSERT INTO employees
+(employee_id, employee_name, joining_date)
 VALUES
-(
-    101,
-    'Kalid',
-    '2026-08-18',
-    '1993-01-15'
-);
+(1, 'Kalid', '2025-04-24'),
+(2, 'Rahman', '2025-06-15'),
+(3, 'David', '2026-01-10');
 
-INSERT INTO date_demo
-VALUES
-(
-    102,
-    'Ahmed',
-    '2026-08-17',
-    '1995-05-20'
-);
+-- Display all records.
+SELECT * FROM employees;
 
--- Display records
-SELECT * FROM date_demo;
+-- Find employees who joined after May 1, 2025.
+SELECT *
+FROM employees
+WHERE joining_date > '2025-05-01';
 
--- Get current date
-SELECT CURDATE();
-
--- Get current date and time
-SELECT NOW();
-
--- Extract year from a date
+-- Extract year.
 SELECT
     employee_name,
     YEAR(joining_date) AS joining_year
-FROM date_demo;
+FROM employees;
 
--- Extract month
+-- Extract month.
 SELECT
     employee_name,
     MONTH(joining_date) AS joining_month
-FROM date_demo;
+FROM employees;
+
+-- Get today's date.
+SELECT CURDATE() AS today;
