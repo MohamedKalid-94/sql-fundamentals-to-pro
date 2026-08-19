@@ -1,26 +1,24 @@
 /*
-========================================================
-MYSQL DAY - DATABASE BASICS
-TOPIC 16: CREATE DATABASE
-========================================================
+============================================================
+MYSQL - TOPIC 16: CREATE DATABASE
+============================================================
 
-Purpose:
-    Create a new database in MySQL.
+WHAT IS CREATE DATABASE?
 
-Syntax:
-    CREATE DATABASE database_name;
+CREATE DATABASE is used to create a new database.
 
-========================================================
+BASIC SYNTAX:
+
+CREATE DATABASE database_name;
+
+============================================================
 */
 
--- Create a database
-CREATE DATABASE mysql_learning;
+-- Create the database if it does not already exist.
+CREATE DATABASE IF NOT EXISTS company_db;
 
--- Display all available databases
-SHOW DATABASES;
+-- Select the database.
+USE company_db;
 
--- Select the database for use
-USE mysql_learning;
-
--- Verify the currently selected database
+-- Verify the current database.
 SELECT DATABASE();
