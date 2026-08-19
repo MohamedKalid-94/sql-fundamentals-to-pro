@@ -1,43 +1,36 @@
 /*
-========================================================
-TOPIC 18: CREATE TABLE
-========================================================
+============================================================
+MYSQL - TOPIC 18: CREATE TABLE
+============================================================
 
-Purpose:
-    Create a new table inside a database.
+WHAT IS CREATE TABLE?
 
-Syntax:
-    CREATE TABLE table_name (
-        column_name datatype,
-        column_name datatype
-    );
+CREATE TABLE creates a table with columns and their
+respective data types.
 
-========================================================
+============================================================
 */
 
--- Select database
-USE mysql_learning;
+CREATE DATABASE IF NOT EXISTS company_db;
+USE company_db;
 
--- Create departments table
-CREATE TABLE departments (
-    department_id INT,
-    department_name VARCHAR(100),
-    location VARCHAR(100)
+DROP TABLE IF EXISTS employees;
+
+CREATE TABLE employees (
+    employee_id INT,
+    employee_name VARCHAR(100),
+    department VARCHAR(50),
+    salary DECIMAL(10,2)
 );
 
--- Display all tables
-SHOW TABLES;
+-- Display the table structure.
+DESCRIBE employees;
 
--- Display table structure
-DESC departments;
+/*
+EXPECTED COLUMNS:
 
-
--- Insert sample data
-INSERT INTO departments
-VALUES
-(1, 'Engineering', 'Chennai'),
-(2, 'HR', 'Bangalore'),
-(3, 'Finance', 'Mumbai');
-
--- Display table data
-SELECT * FROM departments;
+employee_id
+employee_name
+department
+salary
+*/
