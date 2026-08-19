@@ -1,72 +1,54 @@
 /*
-========================================================
-TOPIC 20: ALTER TABLE
-========================================================
+============================================================
+MYSQL - TOPIC 20: ALTER TABLE
+============================================================
 
-Purpose:
-    Modify the structure of an existing table.
+WHAT IS ALTER TABLE?
 
-ALTER TABLE can be used to:
-    - Add columns
-    - Modify columns
-    - Rename columns
-    - Drop columns
-    - Rename tables
+ALTER TABLE is used to modify an existing table.
 
-========================================================
+It can be used to:
+
+1. Add columns
+2. Modify columns
+3. Rename columns
+4. Drop columns
+5. Add or remove constraints
+
+============================================================
 */
 
-USE mysql_learning;
+CREATE DATABASE IF NOT EXISTS company_db;
+USE company_db;
 
--- Create a table for demonstration
-CREATE TABLE alter_demo (
-    id INT,
-    name VARCHAR(50)
+DROP TABLE IF EXISTS employees;
+
+CREATE TABLE employees (
+    employee_id INT,
+    employee_name VARCHAR(100),
+    salary DECIMAL(10,2)
 );
 
--- -----------------------------------------------------
+-- ----------------------------------------------------------
 -- ADD COLUMN
--- -----------------------------------------------------
+-- ----------------------------------------------------------
 
-ALTER TABLE alter_demo
-ADD email VARCHAR(100);
+ALTER TABLE employees
+ADD department VARCHAR(50);
 
-DESC alter_demo;
-
--- -----------------------------------------------------
+-- ----------------------------------------------------------
 -- MODIFY COLUMN
--- -----------------------------------------------------
+-- ----------------------------------------------------------
 
-ALTER TABLE alter_demo
-MODIFY name VARCHAR(100);
+ALTER TABLE employees
+MODIFY salary DECIMAL(12,2);
 
-DESC alter_demo;
-
--- -----------------------------------------------------
+-- ----------------------------------------------------------
 -- RENAME COLUMN
--- -----------------------------------------------------
+-- ----------------------------------------------------------
 
-ALTER TABLE alter_demo
-RENAME COLUMN name TO employee_name;
+ALTER TABLE employees
+RENAME COLUMN employee_name TO full_name;
 
-DESC alter_demo;
-
--- Rename it back
-ALTER TABLE alter_demo
-RENAME COLUMN employee_name TO name;
-
--- -----------------------------------------------------
--- RENAME TABLE
--- -----------------------------------------------------
-
-ALTER TABLE alter_demo
-RENAME TO employee_alter_demo;
-
-SHOW TABLES;
-
--- Rename it back
-ALTER TABLE employee_alter_demo
-RENAME TO alter_demo;
-
--- Final structure
-DESC alter_demo;
+-- Display final structure.
+DESCRIBE employees;
