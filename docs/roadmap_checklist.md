@@ -33,18 +33,18 @@
 
 ## Week 3-5: PostgreSQL (Topics 29-46)
 
-- [ ] Day 17 — Create Table, Insert Into
-- [ ] Day 18 — Fetch Data, Add Column
-- [ ] Day 19 — Update, Alter Column
-- [ ] Day 20 — Drop Column, Delete
-- [ ] Day 21 — Drop Table, Operators
-- [ ] Day 22 — Select, Order By
-- [ ] Day 23 — Limit, Min and Max
-- [ ] Day 24 — Count/Sum/Avg
-- [ ] Day 25 — Cross Join
-- [ ] Day 26 — Group By, Exists
-- [ ] Day 27 — **Practice Day**: Recreate MySQL schema in pgAdmin, compare syntax differences
-- [ ] Day 28 — **Practice Day**: Write 10+ queries covering everything learned in PostgreSQL
+- [x] Day 17 — Create Table, Insert Into
+- [x] Day 18 — Fetch Data, Add Column
+- [x] Day 19 — Update, Alter Column
+- [x] Day 20 — Drop Column, Delete
+- [x] Day 21 — Drop Table, Operators
+- [x] Day 22 — Select, Order By
+- [x] Day 23 — Limit, Min and Max
+- [x] Day 24 — Count/Sum/Avg
+- [X] Day 25 — Cross Join
+- [X] Day 26 — Group By, Exists
+- [X] Day 27 — **Practice Day**: Recreate MySQL schema in pgAdmin, compare syntax differences
+- [X] Day 28 — **Practice Day**: Write 10+ queries covering everything learned in PostgreSQL
 
 ---
 
