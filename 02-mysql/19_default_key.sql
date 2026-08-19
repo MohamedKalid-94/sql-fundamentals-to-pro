@@ -1,39 +1,42 @@
--- Insert parent records
-INSERT INTO fk_departments
-VALUES
-(1, 'Engineering'),
-(2, 'HR'),
-(3, 'Finance');
+/*
+============================================================
+MYSQL - TOPIC 25: DEFAULT
+============================================================
 
--- -----------------------------------------------------
--- CHILD TABLE
--- -----------------------------------------------------
+WHAT IS DEFAULT?
 
-CREATE TABLE fk_employees (
+DEFAULT automatically provides a value when an INSERT
+statement does not provide one.
+
+Note:
+Some beginner syllabi call this "DEFAULT KEY", but the
+MySQL feature is a DEFAULT value/constraint.
+
+============================================================
+*/
+
+CREATE DATABASE IF NOT EXISTS company_db;
+USE company_db;
+
+DROP TABLE IF EXISTS employees;
+
+CREATE TABLE employees (
     employee_id INT PRIMARY KEY,
     employee_name VARCHAR(100) NOT NULL,
-    department_id INT,
-
-    CONSTRAINT fk_employee_department
-    FOREIGN KEY (department_id)
-    REFERENCES fk_departments(department_id)
+    department VARCHAR(50) DEFAULT 'Engineering',
+    status VARCHAR(20) DEFAULT 'Active'
 );
 
--- Valid records
-INSERT INTO fk_employees
+-- Department and status use their DEFAULT values.
+INSERT INTO employees
+(employee_id, employee_name)
 VALUES
-(101, 'Kalid', 1),
-(102, 'Ahmed', 2),
-(103, 'Rahman', 3);
+(1, 'Kalid');
 
--- Display employees
-SELECT * FROM fk_employees;
+-- Explicit values override DEFAULT values.
+INSERT INTO employees
+(employee_id, employee_name, department, status)
+VALUES
+(2, 'Rahman', 'Finance', 'Inactive');
 
--- This will FAIL because department_id 10
--- does not exist in fk_departments.
---
--- INSERT INTO fk_employees
--- VALUES (104, 'Ali', 10);
-
--- Display relationship
-DESC fk_employees;
+SELECT * FROM employees;
