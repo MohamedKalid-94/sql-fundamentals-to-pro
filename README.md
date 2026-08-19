@@ -117,7 +117,7 @@ sql-fundamentals-to-pro/
 
 🎉 **SQL Fundamentals complete!**
 
-**MySQL — `02-mysql/`** *(filenames 09-21; each covers the original Topic 16-28)*
+**MySQL — `02-mysql/`** 
 
 | File | Topic | Status |
 |------|-------|--------|
