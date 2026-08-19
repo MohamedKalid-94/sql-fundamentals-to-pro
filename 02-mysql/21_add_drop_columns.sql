@@ -1,91 +1,69 @@
 /*
-========================================================
-TOPIC 28: ADDING & DROPPING COLUMNS
-========================================================
+============================================================
+MYSQL - TOPIC 28: ADDING & DROPPING COLUMNS
+============================================================
 
 Purpose:
-    Add new columns or remove existing columns
-    from a table using ALTER TABLE.
 
-========================================================
+Learn how to add and remove columns from an existing table.
+
+Commands:
+
+ADD COLUMN
+DROP COLUMN
+
+============================================================
 */
 
-USE mysql_learning;
+CREATE DATABASE IF NOT EXISTS company_db;
+USE company_db;
 
--- Create table
-CREATE TABLE column_demo (
+DROP TABLE IF EXISTS employees;
+
+CREATE TABLE employees (
     employee_id INT PRIMARY KEY,
     employee_name VARCHAR(100),
-    age INT
+    salary DECIMAL(10,2)
 );
 
--- -----------------------------------------------------
--- ADD ONE COLUMN
--- -----------------------------------------------------
+-- ----------------------------------------------------------
+-- ADD COLUMN
+-- ----------------------------------------------------------
 
-ALTER TABLE column_demo
-ADD email VARCHAR(100);
+ALTER TABLE employees
+ADD COLUMN department VARCHAR(50);
 
-DESC column_demo;
+DESCRIBE employees;
 
--- -----------------------------------------------------
--- ADD ANOTHER COLUMN
--- -----------------------------------------------------
+-- Add another column.
+ALTER TABLE employees
+ADD COLUMN joining_date DATE;
 
-ALTER TABLE column_demo
-ADD phone VARCHAR(15);
+DESCRIBE employees;
 
-DESC column_demo;
-
--- -----------------------------------------------------
--- ADD COLUMN WITH DEFAULT VALUE
--- -----------------------------------------------------
-
-ALTER TABLE column_demo
-ADD city VARCHAR(50) DEFAULT 'Chennai';
-
-DESC column_demo;
-
--- -----------------------------------------------------
--- INSERT SAMPLE DATA
--- -----------------------------------------------------
-
-INSERT INTO column_demo
-(
-    employee_id,
-    employee_name,
-    age,
-    email,
-    phone
-)
+-- Insert sample data.
+INSERT INTO employees
+(employee_id, employee_name, salary, department, joining_date)
 VALUES
-(
-    101,
-    'Kalid',
-    32,
-    'kalid@example.com',
-    '9876543210'
-);
+(1, 'Kalid', 80000.00, 'Engineering', '2025-04-24'),
+(2, 'Rahman', 60000.00, 'Finance', '2025-06-15');
 
-SELECT * FROM column_demo;
+SELECT * FROM employees;
 
--- -----------------------------------------------------
--- DROP ONE COLUMN
--- -----------------------------------------------------
+-- ----------------------------------------------------------
+-- DROP COLUMN
+-- ----------------------------------------------------------
 
-ALTER TABLE column_demo
-DROP COLUMN phone;
+ALTER TABLE employees
+DROP COLUMN joining_date;
 
-DESC column_demo;
+-- Verify that joining_date was removed.
+DESCRIBE employees;
 
--- -----------------------------------------------------
--- DROP ANOTHER COLUMN
--- -----------------------------------------------------
+SELECT * FROM employees;
 
-ALTER TABLE column_demo
-DROP COLUMN age;
+/*
+IMPORTANT:
 
-DESC column_demo;
-
--- Display final table
-SELECT * FROM column_demo;
+DROP COLUMN permanently removes the column and its data.
+*/
