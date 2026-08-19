@@ -7,6 +7,8 @@
 
 A structured, hands-on log of learning SQL (MySQL, PostgreSQL, MongoDB) from scratch — as a Python developer building toward an AI/ML career path.
 
+📜 Certified: SQL, MySQL, PostgreSQL & MongoDB: All-in-One Database Course — Udemy (Aug 2026)
+
 ## 📌 Goal
 
 Build solid SQL fundamentals and database skills to add to my resume and prepare for technical interviews, alongside my Python background.
