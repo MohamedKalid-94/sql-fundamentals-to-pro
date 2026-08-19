@@ -1,48 +1,35 @@
 /*
-========================================================
-TOPIC 19: DROP TABLE
-========================================================
+============================================================
+MYSQL - TOPIC 19: DROP TABLE
+============================================================
 
-Purpose:
-    Permanently delete a table and all its data.
+WHAT IS DROP TABLE?
 
-Syntax:
-    DROP TABLE table_name;
+DROP TABLE permanently removes a table and all data
+stored inside it.
 
-WARNING:
-    DROP TABLE removes:
-        - Table structure
-        - All rows
-        - Constraints associated with the table
-
-========================================================
+============================================================
 */
 
-USE mysql_learning;
+CREATE DATABASE IF NOT EXISTS company_db;
+USE company_db;
 
--- Create a temporary table for demonstration
-CREATE TABLE temporary_data (
-    id INT,
-    description VARCHAR(100)
+CREATE TABLE IF NOT EXISTS temporary_employees (
+    employee_id INT,
+    employee_name VARCHAR(100)
 );
 
--- Verify that the table exists
+-- Display tables.
 SHOW TABLES;
 
--- Insert sample data
-INSERT INTO temporary_data
-VALUES
-(1, 'Sample data'),
-(2, 'Temporary record');
+-- Delete the table.
+DROP TABLE IF EXISTS temporary_employees;
 
--- View the data
-SELECT * FROM temporary_data;
-
--- Drop the table
--- DROP TABLE temporary_data;
-
--- Safer version:
--- DROP TABLE IF EXISTS temporary_data;
-
--- Verify that the table has been removed
+-- Verify that the table was removed.
 SHOW TABLES;
+
+/*
+WARNING:
+
+DROP TABLE deletes the table structure and its data.
+*/
