@@ -46,14 +46,40 @@ sql-learning-journey/
 │   └── roadmap-checklist.md         # Full day-by-day roadmap
 ├── 01-fundamentals/
 │   ├── day1_syntax_where.sql
-│   ├── ...
-│   └── day8_practice.sql
-├── 02-mysql/
-│   ├── day16_create_database.sql
-│   ├── ...
-│   └── day28_add_drop_columns.sql
-├── 03-postgresql/
 │   └── ...
+├── 02-mysql/
+│   ├── 16_create_database.sql
+│   ├── 17_drop_database.sql
+│   ├── 18_create_table.sql
+│   ├── 19_drop_table.sql
+│   ├── 20_alter_table.sql
+│   ├── 21_not_null.sql
+│   ├── 22_unique_key.sql
+│   ├── 23_primary_key.sql
+│   ├── 24_foreign_key.sql
+│   ├── 25_default_key.sql
+│   ├── 26_date.sql
+│   ├── 27_views.sql
+│   └── 28_add_drop_columns.sql
+├── 03-postgresql/
+│   ├── 29_create_table.sql
+│   ├── 30_insert_into.sql
+│   ├── 31_fetch_data.sql
+│   ├── 32_add_column.sql
+│   ├── 33_update.sql
+│   ├── 34_alter_column.sql
+│   ├── 35_drop_column.sql
+│   ├── 36_delete.sql
+│   ├── 37_drop_table.sql
+│   ├── 38_operators.sql
+│   ├── 39_select.sql
+│   ├── 40_order_by.sql
+│   ├── 41_limit.sql
+│   ├── 42_min_max.sql
+│   ├── 43_count_sum_avg.sql
+│   ├── 44_cross_join.sql
+│   ├── 45_group_by.sql
+│   └── 46_exists.sql
 └── 04-mongodb/
     └── ...
 ```
@@ -91,7 +117,32 @@ sql-learning-journey/
 | 27 | Views | ✅ Complete |
 | 28 | Adding & Dropping Columns | ✅ Complete |
 
-🎉 **MySQL section (Topics 16-28) complete!** Next: PostgreSQL-specific topics — Topic 29 onward.
+🎉 **MySQL section (Topics 16-28) complete!**
+
+**PostgreSQL section (Topics 29-46):**
+
+| Topic | Name | Status |
+|-------|------|--------|
+| 29 | Create Table | ✅ Complete |
+| 30 | Insert Into | ✅ Complete |
+| 31 | Fetch Data | ✅ Complete |
+| 32 | Add Column | ✅ Complete |
+| 33 | Update | ✅ Complete |
+| 34 | Alter Column | ✅ Complete |
+| 35 | Drop Column | ✅ Complete |
+| 36 | Delete | ✅ Complete |
+| 37 | Drop Table | ✅ Complete |
+| 38 | Operators | ✅ Complete |
+| 39 | Select | ✅ Complete |
+| 40 | Order By | ✅ Complete |
+| 41 | Limit | ✅ Complete |
+| 42 | Min and Max | ✅ Complete |
+| 43 | Count, Sum, Avg | ✅ Complete |
+| 44 | Cross Join | ✅ Complete |
+| 45 | Group By | ✅ Complete |
+| 46 | Exists | ✅ Complete |
+
+🎉 **PostgreSQL section (Topics 29-46) complete!** Next: MongoDB — Topic 47 onward.
 
 ## 📖 How to Use These Scripts
 
