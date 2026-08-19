@@ -3,7 +3,7 @@
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-18-4169E1?logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Community-47A248?logo=mongodb&logoColor=white)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 A structured, hands-on log of learning SQL (MySQL, PostgreSQL, MongoDB) from scratch — as a Python developer building toward an AI/ML career path.
 
@@ -13,9 +13,8 @@ Build solid SQL fundamentals and database skills to add to my resume and prepare
 
 ## ⭐ Highlights
 
-> _(updated as I progress)_
-- 🔲 Built multi-table schemas with primary/foreign keys
-- 🔲 Practiced joins (INNER, LEFT, RIGHT, self-joins)
+- ✅ Built multi-table schemas with primary/foreign keys
+- ✅ Practiced cross joins and subqueries
 - 🔲 Wrote queries using window functions and CTEs
 - 🔲 Practiced query optimization basics (EXPLAIN / indexing)
 - 🔲 Solved SQL problems on LeetCode/HackerRank
@@ -28,132 +27,170 @@ Build solid SQL fundamentals and database skills to add to my resume and prepare
 
 ## 🗺️ Roadmap
 
-Learning is broken into 4 sections, ~2 hours/day:
+Learning is broken into 4 sections:
 
 1. **SQL Fundamentals** (Syntax, WHERE, ORDER BY, INSERT, UPDATE, DELETE, aggregates, GROUP BY, etc.)
 2. **MySQL** (Databases, Tables, Keys, Constraints, Views)
-3. **PostgreSQL** (Tables, CRUD, Joins, Aggregates)
-4. **MongoDB** (Collections, CRUD, Query Operators, Aggregations, Indexing)
+3. **PostgreSQL** (Tables, CRUD, Joins, Aggregates, Exists)
+4. **MongoDB** (Collections, CRUD, Query Operators, Aggregations, Indexing, Validation)
 
-Full checklist: see [`docs/roadmap-checklist.md`](./docs/roadmap-checklist.md)
+Full checklist: see [`docs/roadmap_checklist.md`](./docs/roadmap_checklist.md)
 
 ## 📂 Repo Structure
 
 ```
-sql-learning-journey/
+sql-fundamentals-to-pro/
 ├── README.md
 ├── docs/
-│   └── roadmap-checklist.md         # Full day-by-day roadmap
+│   └── roadmap_checklist.md
 ├── 01-fundamentals/
-│   ├── day1_syntax_where.sql
-│   └── ...
+│   ├── 01_syntax_where.sql
+│   ├── 02_orderby_andornot.sql
+│   ├── 03_insert_null.sql
+│   ├── 04_update_delete.sql
+│   ├── 05_aggregates.sql
+│   ├── 06_union_groupby.sql
+│   ├── 07_operators_null_limit.sql
+│   └── 08_practice.sql
 ├── 02-mysql/
-│   ├── 16_create_database.sql
-│   ├── 17_drop_database.sql
-│   ├── 18_create_table.sql
-│   ├── 19_drop_table.sql
-│   ├── 20_alter_table.sql
-│   ├── 21_not_null.sql
-│   ├── 22_unique_key.sql
-│   ├── 23_primary_key.sql
-│   ├── 24_foreign_key.sql
-│   ├── 25_default_key.sql
-│   ├── 26_date.sql
-│   ├── 27_views.sql
-│   └── 28_add_drop_columns.sql
+│   ├── 09_create_database.sql
+│   ├── 10_drop_database.sql
+│   ├── 11_create_table.sql
+│   ├── 12_drop_table.sql
+│   ├── 13_alter_table.sql
+│   ├── 14_not_null.sql
+│   ├── 15_unique_key.sql
+│   ├── 16_primary_key.sql
+│   ├── 17_foreign_key.sql
+│   ├── 18_date.sql
+│   ├── 19_default_key.sql
+│   ├── 20_views.sql
+│   └── 21_add_drop_columns.sql
 ├── 03-postgresql/
-│   ├── 29_create_table.sql
-│   ├── 30_insert_into.sql
-│   ├── 31_fetch_data.sql
-│   ├── 32_add_column.sql
-│   ├── 33_update.sql
-│   ├── 34_alter_column.sql
-│   ├── 35_drop_column.sql
-│   ├── 36_delete.sql
-│   ├── 37_drop_table.sql
-│   ├── 38_operators.sql
-│   ├── 39_select.sql
-│   ├── 40_order_by.sql
-│   ├── 41_limit.sql
-│   ├── 42_min_max.sql
-│   ├── 43_count_sum_avg.sql
-│   ├── 44_cross_join.sql
-│   ├── 45_group_by.sql
-│   └── 46_exists.sql
+│   ├── 22_create_table.sql
+│   ├── 23_insert_into.sql
+│   ├── 24_fetch_data.sql
+│   ├── 25_add_column.sql
+│   ├── 26_update.sql
+│   ├── 27_alter_column.sql
+│   ├── 28_drop_column.sql
+│   ├── 29_delete.sql
+│   ├── 30_drop_table.sql
+│   ├── 31_operators.sql
+│   ├── 32_select.sql
+│   ├── 33_order_by.sql
+│   ├── 34_limit.sql
+│   ├── 35_min_max.sql
+│   ├── 36_count_sum_avg.sql
+│   ├── 37_cross_join.sql
+│   ├── 38_group_by.sql
+│   └── 39_exists.sql
 └── 04-mongodb/
-    └── ...
+    ├── 40_create_database.js
+    ├── 41_collection.js
+    ├── 42_insert.js
+    ├── 43_find.js
+    ├── 44_update.js
+    ├── 45_delete.js
+    ├── 46_query_operators.js
+    ├── 47_aggregations.js
+    ├── 48_indexing.js
+    ├── 49_validation.js
+    ├── 50_data_api.md
+    └── 51_charts.md
 ```
 
 ## ✅ Progress Log
 
-| Day | Topics | Status |
-|-----|--------|--------|
-| 1 | SQL Syntax, WHERE | ✅ Complete |
-| 2 | ORDER BY, AND/OR/NOT | ✅ Complete |
-| 3 | Insert Into, Null Values | ✅ Complete |
-| 4 | Update, Delete | ✅ Complete |
-| 5 | Min/Max, Count/Sum/Avg | ✅ Complete |
-| 6 | Union, Group By | ✅ Complete |
-| 7 | Operators, NULL Values (deep dive), SELECT TOP | ✅ Complete |
-| 8 | Practice Day (Fundamentals wrap-up) | ✅ Complete |
+**SQL Fundamentals — `01-fundamentals/`**
 
-🎉 **SQL Fundamentals section (Days 1-8) complete!**
+| File | Topics | Status |
+|------|--------|--------|
+| 01_syntax_where.sql | SQL Syntax, WHERE | ✅ Complete |
+| 02_orderby_andornot.sql | ORDER BY, AND/OR/NOT | ✅ Complete |
+| 03_insert_null.sql | INSERT INTO, NULL Values | ✅ Complete |
+| 04_update_delete.sql | UPDATE, DELETE | ✅ Complete |
+| 05_aggregates.sql | MIN/MAX, COUNT/SUM/AVG | ✅ Complete |
+| 06_union_groupby.sql | UNION, GROUP BY | ✅ Complete |
+| 07_operators_null_limit.sql | Operators, NULL (deep dive), LIMIT | ✅ Complete |
+| 08_practice.sql | Practice Day | ✅ Complete |
 
-**MySQL section (Topics 16-28):**
+🎉 **SQL Fundamentals complete!**
 
-| Topic | Name | Status |
-|-------|------|--------|
-| 16 | Create Database | ✅ Complete |
-| 17 | Drop Database | ✅ Complete |
-| 18 | Create Table | ✅ Complete |
-| 19 | Drop Table | ✅ Complete |
-| 20 | Alter Table | ✅ Complete |
-| 21 | Not Null | ✅ Complete |
-| 22 | Unique Key | ✅ Complete |
-| 23 | Primary Key | ✅ Complete |
-| 24 | Foreign Key | ✅ Complete |
-| 25 | Default Key | ✅ Complete |
-| 26 | Date | ✅ Complete |
-| 27 | Views | ✅ Complete |
-| 28 | Adding & Dropping Columns | ✅ Complete |
+**MySQL — `02-mysql/`** *(filenames 09-21; each covers the original Topic 16-28)*
 
-🎉 **MySQL section (Topics 16-28) complete!**
+| File | Topic | Status |
+|------|-------|--------|
+| 09_create_database.sql | 16 — Create Database | ✅ Complete |
+| 10_drop_database.sql | 17 — Drop Database | ✅ Complete |
+| 11_create_table.sql | 18 — Create Table | ✅ Complete |
+| 12_drop_table.sql | 19 — Drop Table | ✅ Complete |
+| 13_alter_table.sql | 20 — Alter Table | ✅ Complete |
+| 14_not_null.sql | 21 — Not Null | ✅ Complete |
+| 15_unique_key.sql | 22 — Unique Key | ✅ Complete |
+| 16_primary_key.sql | 23 — Primary Key | ✅ Complete |
+| 17_foreign_key.sql | 24 — Foreign Key | ✅ Complete |
+| 18_date.sql | 26 — Date | ✅ Complete |
+| 19_default_key.sql | 25 — Default | ✅ Complete |
+| 20_views.sql | 27 — Views | ✅ Complete |
+| 21_add_drop_columns.sql | 28 — Adding & Dropping Columns | ✅ Complete |
 
-**PostgreSQL section (Topics 29-46):**
+🎉 **MySQL complete!**
 
-| Topic | Name | Status |
-|-------|------|--------|
-| 29 | Create Table | ✅ Complete |
-| 30 | Insert Into | ✅ Complete |
-| 31 | Fetch Data | ✅ Complete |
-| 32 | Add Column | ✅ Complete |
-| 33 | Update | ✅ Complete |
-| 34 | Alter Column | ✅ Complete |
-| 35 | Drop Column | ✅ Complete |
-| 36 | Delete | ✅ Complete |
-| 37 | Drop Table | ✅ Complete |
-| 38 | Operators | ✅ Complete |
-| 39 | Select | ✅ Complete |
-| 40 | Order By | ✅ Complete |
-| 41 | Limit | ✅ Complete |
-| 42 | Min and Max | ✅ Complete |
-| 43 | Count, Sum, Avg | ✅ Complete |
-| 44 | Cross Join | ✅ Complete |
-| 45 | Group By | ✅ Complete |
-| 46 | Exists | ✅ Complete |
+**PostgreSQL — `03-postgresql/`**
 
-🎉 **PostgreSQL section (Topics 29-46) complete!** Next: MongoDB — Topic 47 onward.
+| File | Topic | Status |
+|------|-------|--------|
+| 22_create_table.sql | Create Table | ✅ Complete |
+| 23_insert_into.sql | Insert Into | ✅ Complete |
+| 24_fetch_data.sql | Fetch Data | ✅ Complete |
+| 25_add_column.sql | Add Column | ✅ Complete |
+| 26_update.sql | Update | ✅ Complete |
+| 27_alter_column.sql | Alter Column | ✅ Complete |
+| 28_drop_column.sql | Drop Column | ✅ Complete |
+| 29_delete.sql | Delete | ✅ Complete |
+| 30_drop_table.sql | Drop Table | ✅ Complete |
+| 31_operators.sql | Operators | ✅ Complete |
+| 32_select.sql | Select | ✅ Complete |
+| 33_order_by.sql | Order By | ✅ Complete |
+| 34_limit.sql | Limit | ✅ Complete |
+| 35_min_max.sql | Min and Max | ✅ Complete |
+| 36_count_sum_avg.sql | Count, Sum, Avg | ✅ Complete |
+| 37_cross_join.sql | Cross Join | ✅ Complete |
+| 38_group_by.sql | Group By | ✅ Complete |
+| 39_exists.sql | Exists | ✅ Complete |
+
+🎉 **PostgreSQL complete!**
+
+**MongoDB — `04-mongodb/`**
+
+| File | Topic | Status |
+|------|-------|--------|
+| 40_create_database.js | Create Database | ✅ Complete |
+| 41_collection.js | Collection | ✅ Complete |
+| 42_insert.js | Insert | ✅ Complete |
+| 43_find.js | Find | ✅ Complete |
+| 44_update.js | Update | ✅ Complete |
+| 45_delete.js | Delete | ✅ Complete |
+| 46_query_operators.js | Query Operators | ✅ Complete |
+| 47_aggregations.js | Aggregations | ✅ Complete |
+| 48_indexing.js | Indexing | ✅ Complete |
+| 49_validation.js | Validation | ✅ Complete |
+| 50_data_api.md | Data API | ✅ Complete |
+| 51_charts.md | Charts | ✅ Complete |
+
+🎉🎉🎉 **All sections complete — SQL Fundamentals → MySQL → PostgreSQL → MongoDB**
 
 ## 📖 How to Use These Scripts
 
 1. Install MySQL / PostgreSQL / MongoDB locally
-2. Open the `.sql` file in MySQL Workbench (or equivalent GUI)
+2. Open the `.sql`/`.js` file in the matching GUI (MySQL Workbench, pgAdmin 4, MongoDB Compass)
 3. Run statements one at a time to follow along with the comments
-4. Each script is self-contained — creates its own database/table before running queries
+4. Each script is self-contained — creates its own database/table/collection before running queries
 
 ## 🎯 Next Steps
 
-After completing all 4 sections, move on to advanced topics: joins in depth, window functions, CTEs, indexing/query performance, transactions, and normalization — followed by practice problems on LeetCode/HackerRank SQL.
+Move on to advanced topics: joins in depth, window functions, CTEs, indexing/query performance, transactions, and normalization — followed by practice problems on LeetCode/HackerRank SQL.
 
 ---
 
