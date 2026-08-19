@@ -1,45 +1,42 @@
 /*
-========================================================
-TOPIC 21: NOT NULL
-========================================================
+============================================================
+MYSQL - TOPIC 21: NOT NULL
+============================================================
 
-Purpose:
-    NOT NULL prevents a column from storing NULL values.
+WHAT IS NOT NULL?
 
-NULL means:
-    No value / unknown value.
+NOT NULL prevents a column from storing NULL values.
 
-Syntax:
-    column_name datatype NOT NULL;
-
-========================================================
+============================================================
 */
 
-USE mysql_learning;
+CREATE DATABASE IF NOT EXISTS company_db;
+USE company_db;
 
--- Create table with NOT NULL constraints
-CREATE TABLE not_null_demo (
-    employee_id INT NOT NULL,
+DROP TABLE IF EXISTS employees;
+
+CREATE TABLE employees (
+    employee_id INT,
     employee_name VARCHAR(100) NOT NULL,
-    age INT
+    department VARCHAR(50),
+    salary DECIMAL(10,2)
 );
 
--- Valid data
-INSERT INTO not_null_demo
+-- Valid INSERT.
+INSERT INTO employees
+(employee_id, employee_name, department, salary)
 VALUES
-(101, 'Kalid', 32);
+(1, 'Kalid', 'Engineering', 80000.00);
 
--- Valid because age is allowed to be NULL
-INSERT INTO not_null_demo
-VALUES
-(102, 'Ahmed', NULL);
+SELECT * FROM employees;
 
--- This will FAIL because employee_name is NOT NULL.
--- INSERT INTO not_null_demo
--- VALUES (103, NULL, 30);
+-- ----------------------------------------------------------
+-- INVALID EXAMPLE
+-- ----------------------------------------------------------
 
--- Display data
-SELECT * FROM not_null_demo;
+-- This would fail because employee_name is NOT NULL.
 
--- Display structure
-DESC not_null_demo;
+-- INSERT INTO employees
+-- (employee_id, department, salary)
+-- VALUES
+-- (2, 'Finance', 60000.00);
